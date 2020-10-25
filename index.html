@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Web API Quiz</title>
+</head>
+<body>
+
+    <header class="p-2">
+        <a href="">High Scores</a>
+        <span id="timer" class="float-right mr-2">Time: 0</span>
+    </header>
+
+    <!--Start-->
+    <div class="container mt-5" id="home">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8 text-center">
+                <h1>Coding Quiz Challenge</h1><br>
+                <h5>Try to answer the following code-related questions within the time limit. 
+                    Keep in mind that incorrect answers will penalize your score/time by 
+                    ten seconds!
+                </h5>
+                <button type="button" id="startBtn" class="btn btn-infor btn-lg">Start!</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Questions-->
+
+    <div class="container mt-5 d-none" id="quiz">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8" id="QA-block">
+                <h3 id="questions" class="mb-4">Question</h3>
+                <ul id="answers" class="list-unstyled">
+                    <li class="answerChoice">>A</li>
+                    <li class="answerChoice">>B</li>
+                    <li class="answerChoice">>C</li>
+                    <li class="answerChoice">>D</li>
+                </ul>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </div>
+
+    <!--Finished-->
+
+
+    <div class="container mt-5 d-none" id="submit-score">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8">
+                <h2>Finished!</h2>
+                <p id="user-score"></p>
+                <form class="form-group">
+                    <label for="new-score">Enter your initials</label>
+                    <input type="text" id="userName">
+                    <button type="button" class="btn btn-info btn-sm submitBtn">View High Scores</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
